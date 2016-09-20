@@ -1,0 +1,22 @@
+# NPM Files
+node_modules/
+.npm
+
+# Temporary files
+tmp/
+
+# IDE Files
+.idea/
+*.iml
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+
+# Setting Files
+config/
+!config/sample.settings.json
