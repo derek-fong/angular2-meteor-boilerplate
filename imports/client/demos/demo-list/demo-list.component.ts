@@ -14,6 +14,7 @@ import { DemoService } from '../shared/demo.service';
 })
 export class DemoListComponent implements OnInit {
   private demoItems$: Observable<DemoItem[]>;
+  private showAddItemForm: boolean = false;
 
   constructor (private demoService: DemoService) {}
 
@@ -23,5 +24,13 @@ export class DemoListComponent implements OnInit {
 
   onDeleteItem(itemID: string): void {
     this.demoService.deleteItem(itemID);
+  }
+
+  onHideAddItemForm(value: boolean): void {
+    this.showAddItemForm = value;
+  }
+
+  onShowAddItemForm(): void {
+    this.showAddItemForm = true;
   }
 }

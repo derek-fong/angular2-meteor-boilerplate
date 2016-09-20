@@ -47,4 +47,13 @@ export class DemoService {
       return () => { if (demoItemSub && demoItemSub.ready()) { demoItemSub.stop(); } };
     });
   }
+
+  /**
+   * Upsert demo item.
+   * @param {DemoItem} item - Demo item.
+   * @param {string} itemID? - Item ID.
+   */
+  upsertItem(item: DemoItem, itemID?: string): void {
+    Meteor.call('upsertDemoItem', item, itemID);
+  }
 }

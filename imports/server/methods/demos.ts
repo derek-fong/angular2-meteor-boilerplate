@@ -23,7 +23,7 @@ Meteor.methods({
       ];
 
       for (let item of defaultDemos) {
-        Demos.insert(item);
+        Demos.collection.insert(item);
       }
 
       console.log(`[dbInit] Inserted ${Demos.collection.find().count()} documents to "Demos". `);
@@ -40,5 +40,32 @@ Meteor.methods({
     check(itemID, String);
 
     Demos.collection.remove({ _id: itemID });
+  },
+
+  /**
+   * Upsert demo item.
+   * @param {DemoItem} item - Demo item.
+   * @param {string} itemID? - Item ID.
+   */
+  upsertDemoItem: function(item: DemoItem, itemID?: string) {
+    check(item, Object);
+
+    if (typeof itemID === 'string') {
+      Demos.collection.update(itemID, {
+        $set: {
+          description: item.description,
+          cost: item.cost,
+          detail: item.detail,
+          lastUpdatedAt: new Date()
+        }
+      }, (error) => { if (error) { throw new Meteor.Error(error); } });
+    } else {
+      Demos.insert({
+        description: item.description,
+        cost: item.cost,
+        detail: item.detail,
+        createdAt: new Date()
+      }, (error) => { if (error) { throw new Meteor.Error(error); } });
+    }
   }
 });

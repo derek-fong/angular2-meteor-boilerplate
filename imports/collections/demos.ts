@@ -22,5 +22,10 @@ Demos.collection.attachSchema({
   createdAt: {
     type: Date,
     label: 'Created At'
+  },
+  lastUpdatedAt: {
+    type: Date,
+    label: 'Last Updated At',
+    optional: true
   }
 });

@@ -4,4 +4,5 @@ interface DemoItem {
   cost: number;
   detail: string;
   createdAt: Date;
+  lastUpdatedAt?: Date;
 }

@@ -1,5 +1,8 @@
 <h1 class="text-highlight">Demo List</h1>
 
+<button type="button" *ngIf="!showAddItemForm" (click)="onShowAddItemForm()">Show Add Item Form</button>
+<am-demo-upsert-item *ngIf="showAddItemForm" (cancel)="onHideAddItemForm()"></am-demo-upsert-item>
+
 <table width="80%">
   <thead>
     <th>ID</th>
