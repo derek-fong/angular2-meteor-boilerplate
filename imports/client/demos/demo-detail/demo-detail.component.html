@@ -1,0 +1,31 @@
+<h1 class="text-highlight">Demo Details</h1>
+
+<div *ngIf="demoItem">
+  <am-demo-upsert-item *ngIf="enableEdit"
+                       [demoItem]="demoItem"
+                       (cancel)="onCancelEdit()"
+                       (submit)="onSubmit()">
+  </am-demo-upsert-item>
+
+  <div *ngIf="!enableEdit">
+    <button type="button" (click)="onEnableEdit()">Edit</button>
+
+    <ul>
+      <li><strong>ID: </strong>{{demoItem._id}}</li>
+      <li><strong>Description: </strong>{{demoItem.description}}</li>
+      <li><strong>Detail: </strong>{{demoItem.detail}}</li>
+      <li><strong>Cost: </strong>{{demoItem.cost | currency}}</li>
+      <li>
+        <strong>Created At: </strong>
+        {{demoItem.createdAt | date:"dd/MM/yyyy HH:mm"}}
+        ({{demoItem.createdAt | amTimeAgo}})
+      </li>
+      <li *ngIf="demoItem.lastUpdatedAt">
+        <strong>Last Updated At: </strong>{{demoItem.lastUpdatedAt | date:"dd/MM/yyyy HH:mm"}}
+        ({{demoItem.lastUpdatedAt | amTimeAgo}})
+      </li>
+    </ul>
+  </div>
+</div>
+
+<a [routerLink]="['/demos']">Back to Demo List</a>
