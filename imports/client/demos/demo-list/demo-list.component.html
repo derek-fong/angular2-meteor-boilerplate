@@ -1,0 +1,18 @@
+<h1 class="text-highlight">Demo List</h1>
+
+<table width="80%">
+  <thead>
+    <th>ID</th>
+    <th>Description</th>
+    <th>Cost</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of demoItems$ | async">
+      <td>{{item._id}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.cost | currency}}</td>
+      <td><a [routerLink]="[item._id]">View Details</a></td>
+    </tr>
+  </tbody>
+</table>

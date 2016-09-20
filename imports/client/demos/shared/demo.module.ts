@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { DemoService } from './demo.service';
 import { DemosComponent } from './demos.component';
 import { demosRouting } from './demos.routing';
-import { DemoDetailComponent } from '../demo-detail.component/demo-detail.component';
-import { DemoListComponent } from '../demo-list.component/demo-list.component';
+import { DemoDetailComponent } from '../demo-detail/demo-detail.component';
+import { DemoDetailResolver } from '../demo-detail/demo-detail.resolver';
+import { DemoListComponent } from '../demo-list/demo-list.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { DemoListComponent } from '../demo-list.component/demo-list.component';
     DemoListComponent,
     DemosComponent
   ],
-  providers: [DemoService]
+  providers: [
+    DemoDetailResolver,
+    DemoService
+  ]
 })
 export class DemoModule {}

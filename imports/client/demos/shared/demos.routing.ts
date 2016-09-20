@@ -2,8 +2,10 @@ import { ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { DemosComponent } from './demos.component';
-import { DemoDetailComponent } from '../demo-detail.component/demo-detail.component';
-import { DemoListComponent } from '../demo-list.component/demo-list.component';
+import { DemoDetailComponent } from '../demo-detail/demo-detail.component';
+import { DemoDetailResolver } from '../demo-detail/demo-detail.resolver';
+import { DemoListComponent } from '../demo-list/demo-list.component';
+
 
 export const demosRouting: ModuleWithProviders = RouterModule.forChild([
   {
@@ -15,7 +17,8 @@ export const demosRouting: ModuleWithProviders = RouterModule.forChild([
         component: DemoListComponent
       }, {
         path: ':id',
-        component: DemoDetailComponent
+        component: DemoDetailComponent,
+        resolve: { demoItem: DemoDetailResolver }
       }
     ]
   }

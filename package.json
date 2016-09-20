@@ -15,8 +15,9 @@
     "angular2-meteor": "0.7.0-beta.1",
     "angular2-meteor-polyfills": "0.1.1",
     "meteor-node-stubs": "0.2.3",
+    "meteor-rxjs": "0.1.0",
     "reflect-metadata": "0.1.8",
-    "rxjs": "5.0.0-beta.6",
+    "rxjs": "^5.0.0-beta.6",
     "zone.js": "0.6.12"
   },
   "devDependencies": {

@@ -1,0 +1,13 @@
+<h1 class="text-highlight">Demo Details</h1>
+
+<div *ngIf="demoItem">
+  <ul>
+    <li><strong>ID: </strong>{{demoItem._id}}</li>
+    <li><strong>Description: </strong>{{demoItem.description}}</li>
+    <li><strong>Detail: </strong>{{demoItem.detail}}</li>
+    <li><strong>Cost: </strong>{{demoItem.cost | currency}}</li>
+    <li><strong>Created At: </strong>{{demoItem.createdAt | date:"MM/dd/yy HH:mm"}}</li>
+  </ul>
+</div>
+
+<a [routerLink]="['/demos']">Back to Demo List</a>

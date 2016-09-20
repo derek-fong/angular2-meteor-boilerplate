@@ -19,3 +19,4 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 
 angular2-compilers@=0.6.0
 barbatus:angular2-runtime
+aldeed:collection2
