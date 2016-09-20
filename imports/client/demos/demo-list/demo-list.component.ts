@@ -20,4 +20,8 @@ export class DemoListComponent implements OnInit {
   ngOnInit(): void {
     this.demoItems$ = this.demoService.allDemos$;
   }
+
+  onDeleteItem(itemID: string): void {
+    this.demoService.deleteItem(itemID);
+  }
 }

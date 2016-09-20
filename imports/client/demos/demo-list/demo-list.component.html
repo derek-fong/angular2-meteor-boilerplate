@@ -5,14 +5,17 @@
     <th>ID</th>
     <th>Description</th>
     <th>Cost</th>
-    <th>Action</th>
+    <th>Actions</th>
   </thead>
   <tbody>
     <tr *ngFor="let item of demoItems$ | async">
       <td>{{item._id}}</td>
       <td>{{item.description}}</td>
       <td>{{item.cost | currency}}</td>
-      <td><a [routerLink]="[item._id]">View Details</a></td>
+      <td>
+        <a [routerLink]="[item._id]">View Details</a> |
+        <button type="button" (click)="onDeleteItem(item._id)">Delete Item</button>
+      </td>
     </tr>
   </tbody>
 </table>

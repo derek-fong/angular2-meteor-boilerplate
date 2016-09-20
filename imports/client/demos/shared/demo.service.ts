@@ -26,6 +26,14 @@ export class DemoService {
   }
 
   /**
+   * Delete item from `Demos` collection which matching item ID.
+   * @param {string} itemID - Item ID.
+   */
+  deleteItem(itemID: string): void {
+    Meteor.call('deleteDemoItem', itemID);
+  }
+
+  /**
    * Get demo item by `id`.
    * @param {string} id - Demo item's ID.
    * @returns {Observable<DemoItem>} - `DemoItem` Observable.

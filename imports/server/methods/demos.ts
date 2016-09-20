@@ -1,3 +1,5 @@
+import { check } from 'meteor/check';
+
 import { Demos } from '../../collections';
 
 Meteor.methods({
@@ -28,5 +30,15 @@ Meteor.methods({
     } else {
       console.log(`[dbInit] ${Demos.collection.find().count()} documents already exist in "Demos". `);
     }
+  },
+
+  /**
+   * Delete item from `Demos` collection which matching item ID.
+   * @param {string} itemID - Item ID.
+   */
+  deleteDemoItem: function(itemID: string): void {
+    check(itemID, String);
+
+    Demos.collection.remove({ _id: itemID });
   }
 });
