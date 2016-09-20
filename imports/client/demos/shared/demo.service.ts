@@ -18,7 +18,7 @@ export class DemoService {
   get allDemos$(): Observable<DemoItem[]> {
     return Observable.create((observer: Observer<DemoItem[]>) => {
       let allDemosSub: Meteor.SubscriptionHandle = Meteor.subscribe('allDemos', {
-        onReady: () => { observer.next(Demos.find({})); },
+        onReady: () => { observer.next(Demos.find({}, { sort: { cost: -1 } })); },
         onStop: (error: Meteor.Error) => { if (error) { observer.error(error); } }
       });
       return () => { if (allDemosSub && allDemosSub.ready()) { allDemosSub.stop(); } };
