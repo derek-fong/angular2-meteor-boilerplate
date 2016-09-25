@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 import template from './demo-list.component.html';
@@ -16,7 +13,8 @@ export class DemoListComponent implements OnInit {
   private demoItems$: Observable<DemoItem[]>;
   private showAddItemForm: boolean = false;
 
-  constructor (private demoService: DemoService) {}
+  constructor (private demoService: DemoService) {
+  }
 
   ngOnInit(): void {
     this.demoItems$ = this.demoService.allDemos$;
