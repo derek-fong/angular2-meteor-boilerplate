@@ -8,6 +8,7 @@ angular2-compilers@0.6.1
 autoupdate@1.2.11
 babel-compiler@6.9.1
 babel-runtime@0.1.11
+barbatus:angular2-polyfills@0.5.0
 barbatus:angular2-runtime@0.5.0
 barbatus:css-compiler@0.3.0
 barbatus:scss-compiler@3.8.1_1
@@ -65,7 +66,6 @@ reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
 routepolicy@1.0.11
-shell-server@0.2.1
 spacebars@1.0.13
 spacebars-compiler@1.0.13
 standard-minifier-css@1.2.0
