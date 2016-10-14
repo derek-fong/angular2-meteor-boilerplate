@@ -1,6 +1,9 @@
 {
   "name": "angular2-meteor-boilerplate",
   "private": true,
+  "description": "Angular 2 Meteor Boilerplate",
+  "homepage": "https://github.com/derek-fong/angular2-meteor-boilerplate",
+  "license": "MIT",
   "scripts": {
     "start": "meteor run"
   },
@@ -13,31 +16,31 @@
     "url": "https://github.com/derek-fong/angular2-meteor-boilerplate/issues"
   },
   "dependencies": {
-    "@angular/common": "2.0.1",
-    "@angular/compiler": "2.0.1",
-    "@angular/core": "2.0.1",
-    "@angular/forms": "2.0.1",
-    "@angular/platform-browser": "2.0.1",
-    "@angular/platform-browser-dynamic": "2.0.1",
-    "@angular/router": "3.0.1",
-    "angular2-meteor": "0.7.0-beta.3",
+    "@angular/common": "2.1.0",
+    "@angular/compiler": "2.1.0",
+    "@angular/core": "2.1.0",
+    "@angular/forms": "2.1.0",
+    "@angular/platform-browser": "2.1.0",
+    "@angular/platform-browser-dynamic": "2.1.0",
+    "@angular/router": "3.1.0",
+    "angular2-meteor": "0.7.0",
     "angular2-meteor-polyfills": "0.1.1",
-    "angular2-moment": "1.0.0-beta.1",
+    "angular2-moment": "1.0.0-beta.5",
     "es6-shim": "0.35.1",
     "meteor-node-stubs": "0.2.3",
-    "meteor-rxjs": "0.2.3",
+    "meteor-rxjs": "0.3.0",
     "reflect-metadata": "0.1.8",
     "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.21"
+    "zone.js": "0.6.25"
   },
   "devDependencies": {
-    "clang-format": "1.0.44",
-    "codelyzer": "0.0.28",
+    "clang-format": "1.0.45",
+    "codelyzer": "1.0.0-beta.2",
     "ghooks": "1.3.2",
     "tslint": "3.15.1",
-    "typescript": "2.0.0",
-    "typings": "1.3.3",
-    "validate-commit-msg": "2.8.0"
+    "typescript": "2.0.3",
+    "typings": "1.4.0",
+    "validate-commit-msg": "2.8.2"
   },
   "config": {
     "ghooks": {
