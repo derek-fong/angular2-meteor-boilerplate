@@ -1,5 +1,6 @@
 {
   "name": "angular2-meteor-boilerplate",
+  "version": "0.2.1",
   "private": true,
   "description": "Angular 2 Meteor Boilerplate",
   "homepage": "https://github.com/derek-fong/angular2-meteor-boilerplate",
